@@ -4,6 +4,7 @@ import spacy
 
 from App.tokenizer.TokenWizard import TokenWizard
 
+
 class TestTokenWizardWhithSpacy(unittest.TestCase):
 
     def helper_init_token_wizard__whith_spacy(self):
@@ -43,16 +44,16 @@ class TestTokenWizardWhithSpacy(unittest.TestCase):
                               {'aime': '{}'},
                               {'le': '{Le: 655.9335589408875, le: 1000.0}'},
                               {'foot': '{football: 723.4567403793335}'},
-                              {'Le': '{le: 655.9335589408875}'},
-                              {'football': '{soccer: 650.7284045219421}'},
+                              {'Le': '{le: 655.9335589408875, le: 655.9335589408875}'},
+                              {'football': '{foot: 723.4567403793335, soccer: 650.7284045219421}'},
                               {"c'": "{c': 1000.0}"},
                               {'est': '{est: 1000.0}'},
                               {'bien': '{Franchement: 570.3409314155579}'},
-                              {'Franchement': '{}'},
-                              {'le': '{}'},
-                              {'soccer': '{}'},
-                              {"c'": '{}'},
-                              {'est': '{}'},
+                              {'Franchement': '{bien: 570.3409314155579}'},
+                              {'le': '{le: 1000.0, Le: 655.9335589408875}'},
+                              {'soccer': '{football: 650.7284045219421}'},
+                              {"c'": "{c': 1000.0}"},
+                              {'est': '{est: 1000.0}'},
                               {'cool': '{}'}]
         assertable_relations = self.helper_assert_tokens_object__for_relations(output)
         self.assertEqual(expected_token, assertable_tokens)
