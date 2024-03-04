@@ -1,4 +1,4 @@
-from App.tokenizer.Tokenizer import TokenWizard
+from App.tokenizer.TokenWizard import TokenWizard
 
 
 class Application:
