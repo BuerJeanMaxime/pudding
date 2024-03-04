@@ -4,14 +4,13 @@ from typing import List
 from App.Token.Token import Token
 
 
-class Tokenizer:
-    def __init__(self,syntagms,mwes,spacy,links_finder):
+class TokenWizard:
+    def __init__(self,syntagms,mwes,spacy):
         self.syntagms = syntagms
         self.mwes = mwes
         self.spacy = spacy
-        self.links_finder = links_finder
 
-    def tokenize(self):
+    def enchance_tokens(self):
         tokens = [Token(spacy_token) for spacy_token in self.spacy(" ".join(self.syntagms))]
         self.find_relations_between_tokens(tokens)
         return tokens
