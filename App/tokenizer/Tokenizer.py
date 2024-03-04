@@ -19,5 +19,5 @@ class TokenWizard:
             score = token_1.spacy_token.similarity(token_2.spacy_token)
             if score < 0.55:
                 continue
-            token_1.relation[token_2] = score
+            token_1.relation[token_2] = (score*1000)
 
