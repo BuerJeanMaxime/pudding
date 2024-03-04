@@ -1,8 +1,8 @@
-from typing import List
+from typing import Dict
 
 
 class Token:
 
-    def __init__(self,token):
-        self.token: str = token
-        self.relation: List[Token] = []
+    def __init__(self,spacy_token):
+        self.spacy_token: str = spacy_token
+        self.relation: Dict[Token,float] = {}
