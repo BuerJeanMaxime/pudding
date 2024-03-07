@@ -1,14 +1,16 @@
 from itertools import permutations
 from typing import List
 
+import spacy
+
 from App.Token.Token import Token
 
 
 class TokenWizard:
-    def __init__(self,syntagms,mwes,spacy):
+    def __init__(self,syntagms,mwes,spacy_name):
         self.syntagms = syntagms
         self.mwes = mwes
-        self.spacy = spacy
+        self.spacy = spacy.load(spacy_name)
 
     def enchance_tokens(self):
         tokens = [Token(spacy_token) for spacy_token in self.spacy(" ".join(self.syntagms))]
