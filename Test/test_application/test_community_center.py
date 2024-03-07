@@ -9,8 +9,8 @@ from Test.mocks.MockSpacyToken import MockSpacyToken
 class TestCommunityCenter(unittest.TestCase):
 
     def helper_create_token_list(self):
-        foot = Token(MockSpacyToken("foot"))
-        gf38 = Token(MockSpacyToken("gf38"))
+        foot = Token(MockSpacyToken("foot"),True)
+        gf38 = Token(MockSpacyToken("gf38"),True)
 
         foot.relation[gf38] = 900
         gf38.relation[foot] = 878
