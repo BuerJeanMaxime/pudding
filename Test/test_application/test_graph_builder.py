@@ -11,8 +11,8 @@ class TestGraphBuilder(unittest.TestCase):
 
     def helper_init_graph_builder_object(self):
         def _helper_init_enchanced_tokens():
-            foot = Token(MockSpacyToken("foot"))
-            gf38 = Token(MockSpacyToken("gf38"))
+            foot = Token(MockSpacyToken("foot"),True)
+            gf38 = Token(MockSpacyToken("gf38"),True)
 
             foot.relation[gf38] = 900
             gf38.relation[foot] = 878
