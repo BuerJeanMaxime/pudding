@@ -23,7 +23,10 @@ class TokenWizard:
             score = token_1.spacy_token.similarity(token_2.spacy_token)
             if score < 0.55:
                 continue
-            token_1.relation[token_2] = (score*1000)
+            token_1.relation[token_2] = (score*1000 * self.is_same_tokens(token_1,token_2))
+
+    def is_same_tokens(self,token_1,token_2):
+        return 0.8 if token_1.spacy_token.lemma_ == token_1.spacy_token.lemma_ else 1
 
     def is_relevent_token(self,spacy_token):
         return not ((spacy_token.is_punct)
