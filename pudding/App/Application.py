@@ -15,3 +15,10 @@ class Application:
         self.graph_builder.get_complete_graph()
         communities = self.community_center.get_communities()
         return communities
+    @staticmethod
+    def create_App_object(syntagm,mwe,spacy):
+        tw = TokenWizard(syntagm, mwe, spacy)
+        gb = GraphBuilder(tw.enchance_tokens())
+        cc = CommunityCenter(gb.get_complete_graph())
+        app = Application(tw, gb, cc)
+        return app
