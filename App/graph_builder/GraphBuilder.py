@@ -1,10 +1,14 @@
+from typing import List
+
 import networkx as nx
+
+from App.Token.Token import Token
 
 
 class GraphBuilder:
     def __init__(self,enchanced_tokens):
-        self.enchanced_tokens = enchanced_tokens
-        self.graph = nx.Graph()
+        self.enchanced_tokens: List[Token] = enchanced_tokens
+        self.graph: nx.Graph = nx.Graph()
 
     def get_complete_graph(self):
         self._constitute_graph()
