@@ -3,7 +3,7 @@ from typing import List
 
 import spacy
 
-from App.Token.Token import Token
+from pudding.App.Token.Token import Token
 
 
 class TokenWizard:

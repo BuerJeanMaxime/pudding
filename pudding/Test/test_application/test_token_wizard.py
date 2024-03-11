@@ -2,7 +2,7 @@ import unittest
 
 import spacy
 
-from App.tokenizer.TokenWizard import TokenWizard
+from pudding.App.tokenizer.TokenWizard import TokenWizard
 
 
 class TestTokenWizardWhithSpacy(unittest.TestCase):

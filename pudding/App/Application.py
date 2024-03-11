@@ -1,6 +1,6 @@
-from App.communities_finder.CommunityCenter import CommunityCenter
-from App.graph_builder.GraphBuilder import GraphBuilder
-from App.tokenizer.TokenWizard import TokenWizard
+from pudding.App.communities_finder.CommunityCenter import CommunityCenter
+from pudding.App.graph_builder.GraphBuilder import GraphBuilder
+from pudding.App.tokenizer.TokenWizard import TokenWizard
 
 
 class Application:

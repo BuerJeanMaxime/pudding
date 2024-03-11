@@ -3,7 +3,7 @@ from typing import Dict, List
 import community as community_louvain
 import networkx as nx
 
-from App.Token.Token import Token
+from pudding.App.Token.Token import Token
 
 
 class CommunityCenter:
