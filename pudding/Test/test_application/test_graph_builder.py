@@ -2,9 +2,9 @@ import unittest
 
 import networkx as nx
 
-from App.Token.Token import Token
-from App.graph_builder.GraphBuilder import GraphBuilder
-from Test.mocks.MockSpacyToken import MockSpacyToken
+from pudding.App.Token.Token import Token
+from pudding.App.graph_builder.GraphBuilder import GraphBuilder
+from pudding.Test.mocks.MockSpacyToken import MockSpacyToken
 
 
 class TestGraphBuilder(unittest.TestCase):

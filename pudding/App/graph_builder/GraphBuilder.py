@@ -2,7 +2,7 @@ from typing import List
 
 import networkx as nx
 
-from App.Token.Token import Token
+from pudding.App.Token.Token import Token
 
 
 class GraphBuilder:

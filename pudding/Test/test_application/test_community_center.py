@@ -1,9 +1,9 @@
 import unittest
 
-from App.Token.Token import Token
-from App.communities_finder.CommunityCenter import CommunityCenter
-from App.graph_builder.GraphBuilder import GraphBuilder
-from Test.mocks.MockSpacyToken import MockSpacyToken
+from pudding.App.Token.Token import Token
+from pudding.App.communities_finder.CommunityCenter import CommunityCenter
+from pudding.App.graph_builder.GraphBuilder import GraphBuilder
+from pudding.Test.mocks.MockSpacyToken import MockSpacyToken
 
 
 class TestCommunityCenter(unittest.TestCase):

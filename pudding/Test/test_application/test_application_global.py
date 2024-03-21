@@ -1,15 +1,15 @@
 import unittest
 
-from App.Application import Application
-from App.communities_finder.CommunityCenter import CommunityCenter
-from App.graph_builder.GraphBuilder import GraphBuilder
-from App.tokenizer.TokenWizard import TokenWizard
+from pudding.App.Application import Application
+from pudding.App.communities_finder.CommunityCenter import CommunityCenter
+from pudding.App.graph_builder.GraphBuilder import GraphBuilder
+from pudding.App.tokenizer.TokenWizard import TokenWizard
 
 
 class TestApplicationGlobal(unittest.TestCase):
 
     def helper_init_app_object(self):
-        with open('C:/Users/HP2_STAT/Desktop/Git Projet/pudding/Test/test_application/test_resources/syntagms',
+        with open('C:/Users/HP2_STAT/Desktop/Git Projet/pudding/pudding/Test/test_application/test_resources/syntagms',
                   encoding="utf-8") as f:
             syntagms = f.readlines()
         tw = TokenWizard(syntagms, ["pomme de terre", "pommes de terre"], "fr_core_news_md")
